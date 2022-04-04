@@ -20,7 +20,8 @@ else:
 print(result)
 
 
-### Another solution ###
+
+### Another Solution ###
 
 # import sys
 # sys.stdin=open('input.txt', 'rt')
