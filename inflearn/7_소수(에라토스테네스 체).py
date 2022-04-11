@@ -1,9 +1,11 @@
 N = int(input())
-num_lst = list(range(2, N+1))
+ch = [0] * (N+1)
+cnt = 0
 
-for i in range(2, N//2):
-    for num in num_lst:
-        if num != i and num % i == 0:
-            num_lst.remove(num)
-            
-print(len(num_lst))
+for i in range(2, N+1):
+    if ch[i] == 0:
+       cnt += 1
+       for j in range(i, N+1, i):
+           ch[j] = 1
+           
+print(cnt)
