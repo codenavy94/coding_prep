@@ -1,3 +1,14 @@
-a = [69, 42, 68, 76, 40, 87, 14, 65, 76, 81]
+import sys
+sys.stdin = open("input.txt", "r")
+
+L = int(input())
+a = list(map(int, input().split()))
+m = int(input())
 a.sort()
-print(a)
+
+for _ in range(m):
+    a[0] += 1
+    a[-1] -= 1
+    a.sort()
+    
+print(a[-1] - a[0])
