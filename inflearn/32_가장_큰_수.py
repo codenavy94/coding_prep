@@ -14,4 +14,4 @@ for x in num:
 if m != 0:
     stack = stack[:-m]
     
-print(''.join(list(map(str, stack))))
+print(''.join(map(str, stack)))
